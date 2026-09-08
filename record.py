@@ -1,10 +1,13 @@
 import sounddevice as sd
 import numpy as np
 import wave
+from pathlib import Path
 
 DURATION = 10
 SAMPLE_RATE = 16000
 FILENAME = "recordings/voice.wav"
+
+Path("recordings").mkdir(exist_ok=True)
 
 print("🎤 Recording will start now...")
 print(f"Speak for {DURATION} seconds.")
